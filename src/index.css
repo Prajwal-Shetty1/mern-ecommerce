@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navbar img {
+    width: 150px;
+    padding-left: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; 
+    padding-right: 20px;
+    
+}
+.nav-item {
+  text-decoration: none; /* removes default underline */
+  color: black;
+  position: relative; /* needed for ::after positioning */
+}
+.nav-item.active::after {
+  content: '';
+  display: block;       
+  height: 1.5px;
+  background: black;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.nav-item:hover::after {
+  content: '';
+  display: block;
+  height: 1.5px;
+  background: rgb(14, 14, 14);
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+.nav-logo{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+.nav-search img{
+    width: 35px;
+    height: auto;
+}
+.nav-profile img{
+    width: 30px;
+    height: auto;
+}
+.dropdown{
+    background-color: rgb(167, 233, 212);
+    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  
+}
+.dropdown a{
+    text-decoration: none;
+    color: black;
+}
+.nav-menu img{
+    width: 30px;
+    height: auto;
+}
+.nav-cart {
+  position: relative;
+  display: inline-block;
+}
+.nav-cart img{
+    width: 30px;
+    height:auto;
+}
+.nav-cart p {
+  position: absolute;
+  top: -5px;    /* adjust to place number above/right */
+  right: -10px; /* adjust to place number near icon */
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
