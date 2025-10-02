@@ -1,12 +1,23 @@
-# React + Vite
+# E-Commerce Platform 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my learning journey of building an e-commerce platform step by step.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+###  1  
+- Learned how to create a **React project setup**,- Added **React Router DOM** and understood why it is used for navigation between pages.
+- - Created basic **pages** like Home, Collection, About, Contact, Product , Cart, Login, PlaceOrdered, Orders.
+###  2  
+-Added **Company logo** in the navbar.
+- Built a **Navbar** with links for Home, Collection, About, and Contact.
+- Added **Profile icon** in the navbar,Implemented a **Dropdown menu** that shows MyProfile, Orders, and Logout options when clicking the profile.
+  Added a **Cart icon** with a number badge (10) near the logo.Added a **search icon** and **menu icon** in the navbar.
+###  3
+-**Sidebar Menu (Mobile)**
+Menu icon opens links: HOME, COLLECTION, ABOUT, CONTACT.
+BACK button closes the menu.
+-**Hero Section**
+Banner with text on left and image on right.
+-**ShopContext (Global Store)**
+Stores products, currency, delivery_cost.
+Provides data to all components using React Context.
+-**LatestCollection Component**
+Uses useContext to get products from ShopContext.
