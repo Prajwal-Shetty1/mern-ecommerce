@@ -3,6 +3,7 @@ import { assets } from '../assets/assets';
 import { NavLink,Link } from 'react-router-dom';
 const NavBar = () => {
   const [showDropDown , setShowDropDown] = useState(false);
+  const [showSidebar , setShowSidebar] = useState(false);
   return (
     <div className='navbar'>
   <img src={assets.logo} alt="Logo" />
@@ -31,8 +32,8 @@ const NavBar = () => {
       <img src={assets.profile_icon} alt="profile" />
       { showDropDown && (
         <div className='dropdown'>
-           <a href="/">MyProfile</a>
-           <a href="/Orders">Orders</a>
+           <div href="/">MyProfile</div>
+           <div href="/Orders">Orders</div>
            <button onClick={() => alert("Logged Out!")}>LogOut</button>
         </div>
       )}
@@ -42,9 +43,19 @@ const NavBar = () => {
       <img src={assets.cart_icon} alt="cart" />
       <p>10</p>
     </Link>
-
+{/*Sidebar menu for small screens*/}
     <div className='nav-menu'>
-      <img src={assets.menu_icon} alt="menu" />
+      <img src={assets.menu_icon} onClick={() => setShowSidebar(true)} alt="menu" />
+      {  showSidebar && (
+         <div className='side-bar'>
+        <button className='close-btn' onClick={() => setShowSidebar(false) }>BACK</button>
+        <NavLink to="/">HOME</NavLink>
+        <NavLink to="/Collection">COLLECTION</NavLink>
+        <NavLink to="/About">ABOUT</NavLink>
+        <NavLink to="/Contact">CONTACT</NavLink>
+
+      </div>
+      )}
     </div>
   </div>
 </div>

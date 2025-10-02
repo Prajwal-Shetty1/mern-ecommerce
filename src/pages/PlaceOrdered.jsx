@@ -8,4 +8,4 @@ const PlaceOrdered = () => {
   )
 }
 
-export default PlaceOrdered;_
+export default PlaceOrdered;
