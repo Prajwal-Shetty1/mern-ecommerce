@@ -21,3 +21,11 @@ Stores products, currency, delivery_cost.
 Provides data to all components using React Context.
 -**LatestCollection Component**
 Uses useContext to get products from ShopContext.
+
+### 4
+1.Created ProductItem component to show product image, name, and price.
+2.Made Title component to display headings.
+3.Built LatestCollection to show the 10 newest products.
+4.Built BestSeller to show top 5 best-selling products.
+5.Used ShopContext to get product data and currency.
+6.Used React Router (Link) to go to product details page.
