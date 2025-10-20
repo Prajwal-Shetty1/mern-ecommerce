@@ -11,7 +11,7 @@ This is my learning journey of building an e-commerce platform step by step.
 - Added **Profile icon** in the navbar,Implemented a **Dropdown menu** that shows MyProfile, Orders, and Logout options when clicking the profile.
   Added a **Cart icon** with a number badge (10) near the logo.Added a **search icon** and **menu icon** in the navbar.
 ###  3
--**Sidebar Menu (Mobile)**
+-**Sidebar Menu (Mobile)**          
 Menu icon opens links: HOME, COLLECTION, ABOUT, CONTACT.
 BACK button closes the menu.
 -**Hero Section**

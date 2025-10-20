@@ -6,7 +6,7 @@ const NavBar = () => {
   const [showSidebar , setShowSidebar] = useState(false);
   return (
     <div className='navbar'>
-  <img src={assets.logo} alt="Logo" />
+  <Link to='/'><img src={assets.logo} alt="Logo" /></Link>
   
   <div className='nav-links'>
     <NavLink to="/"  className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>

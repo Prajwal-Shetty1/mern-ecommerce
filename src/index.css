@@ -152,7 +152,7 @@ body{
 }
 .hero-left h1 {
   font-size: 48px;  
-  font-family:'Montserrat', sans-serif;
+  font-family:'Playfair Display', serif;
   font-weight: 500;  
   line-height: 1.2;
   margin: 20px 0;
@@ -179,3 +179,39 @@ body{
   max-width: 750px; 
   height: auto;     
 }
+/*Latest collection section*/
+.title-heading {
+  text-align: center;
+  font-size: 30px;  
+  font-family:'Playfair Display', serif;
+  font-weight: 500;  
+  line-height: 1.2;
+  margin-top: 40px ;
+}
+.desc{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 20px;
+}
+.rendering-products {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+  gap: 20px; /* space between items */
+  margin-top: 20px;
+  margin: 20px;
+}
+.rendering-products a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+.rendering-products img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+  
