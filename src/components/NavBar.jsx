@@ -32,8 +32,8 @@ const NavBar = () => {
       <img src={assets.profile_icon} alt="profile" />
       { showDropDown && (
         <div className='dropdown'>
-           <div href="/">MyProfile</div>
-           <div href="/Orders">Orders</div>
+           <Link to="/">MyProfile</Link>
+           <Link to="/Orders">Orders</Link>
            <button onClick={() => alert("Logged Out!")}>LogOut</button>
         </div>
       )}

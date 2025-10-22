@@ -11,6 +11,7 @@ import PlaceOrdered from './pages/PlaceOrdered';
 import Orders from './pages/Orders';
 import './index.css';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 const App = () => {
   return (
     <div>
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/PlacedOrdered' element={<PlaceOrdered />} />
         <Route path='/Orders' element={<Orders />} />
       </Routes>
+      <Footer />
     </div>
   )
 }

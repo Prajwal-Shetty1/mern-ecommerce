@@ -29,3 +29,9 @@ Uses useContext to get products from ShopContext.
 4.Built BestSeller to show top 5 best-selling products.
 5.Used ShopContext to get product data and currency.
 6.Used React Router (Link) to go to product details page.
+
+### 5
+- Created **OurPolicy** section with icons, headings, and descriptions for exchange, return, and support policies.
+- Built **NewsletterBox** component with a subscription form that prevents page refresh and takes email input.
+- Developed **Footer** with company info, contact details, and copyright text.
+- Styled components: added font, colors, image sizes, text alignment, list styling, and spacing.
