@@ -35,3 +35,10 @@ Uses useContext to get products from ShopContext.
 - Built **NewsletterBox** component with a subscription form that prevents page refresh and takes email input.
 - Developed **Footer** with company info, contact details, and copyright text.
 - Styled components: added font, colors, image sizes, text alignment, list styling, and spacing.
+
+### 6
+- Fixed mobile view sizes for OurPolicy.jsx, NewsletterBox.jsx, and Footer.jsx to look proper on small screens.
+- Created a responsive Collection page in React.
+- Learned how to use useState and useEffect to detect screen size (mobile or desktop).
+- Implemented conditional rendering — filters are always visible on desktop, but toggle on mobile.
+- Improved understanding of window resizing and event listeners in React.

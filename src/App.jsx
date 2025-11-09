@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import PlaceOrdered from './pages/PlaceOrdered';
 import Orders from './pages/Orders';
 import './index.css';
+
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 const App = () => {
