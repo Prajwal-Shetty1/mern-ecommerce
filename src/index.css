@@ -388,3 +388,61 @@ section, .our-policy, .letter-box, .footer {
   margin: 8px 0;
   font-size: 15px;
 }
+/*RIGHT SIDE*/
+.main-layout {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.right-column {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-side p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-top: -40px;
+}
+
+.right-side select {
+  padding: 3px 5px;
+  font-size: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: white;
+  margin-right: 50px;
+  
+}
+
+.mapping-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ALWAYS 4 per row */
+  gap: 20px;
+   margin-top: 20px;
+  margin: 20px;
+}
+
+.mapping-products a{
+    text-decoration: none;
+  color: inherit;
+  text-align: center;
+}  
+.mapping-products img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px; 
+}

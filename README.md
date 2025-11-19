@@ -42,3 +42,21 @@ Uses useContext to get products from ShopContext.
 - Learned how to use useState and useEffect to detect screen size (mobile or desktop).
 - Implemented conditional rendering — filters are always visible on desktop, but toggle on mobile.
 - Improved understanding of window resizing and event listeners in React.
+
+### 6
+1. I have  loaded all products from the ShopContext.
+These products contain details like name, price, category, and subCategory.
+2. I keep two arrays in state:
+category → stores selected categories (Men, Women, Kids)
+subCategory → stores selected types (Topwear, Bottomwear, Winterwear)
+3. When a checkbox is clicked, you add or remove its value in the state.
+If it’s already selected → remove it
+If it’s not selected → add it
+This works for both category and subCategory.
+4. I have used a function applyFilter() that filters products.
+It creates a copy of all products and then:
+If any category is selected → keep only those category items
+If any type is selected → keep only those type items
+Finally, the filtered list is saved in filterProducts.
+5. Whenever category or subCategory changes, the filter runs again.
+This is done using useEffect(() => applyFilter(), [category, subCategory]).
