@@ -13,10 +13,13 @@ import './index.css';
 
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import SearchBar from './components/SearchBar';
 const App = () => {
   return (
     <div>
       <NavBar />
+      <SearchBar />
+      
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Collection' element={<Collection />} />

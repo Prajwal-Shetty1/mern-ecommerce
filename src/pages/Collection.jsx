@@ -11,6 +11,8 @@ const Collection = () => {
   const [filterProducts, setFilterProducts] = useState([]);
   const [category, setCategory] = useState([]); //categories
   const [subCategory, setSubCategory] = useState([]); //Types
+  const [sortType , setSortType] = useState('relavant');//sorting low,high,relavant
+  const {search , showSearch} = useContext(ShopContext);
 
   //To initialize categories
   const toggleCategory = (e) =>{
@@ -36,7 +38,7 @@ const Collection = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
+/*we have added it below apply filter
   useEffect(() => {
        setFilterProducts(products);
   },[]);
@@ -58,13 +60,40 @@ const applyFilter = () => {
   if (subCategory.length>0){
     productsCopy = productsCopy.filter(item => subCategory.includes(item.subCategory))
   }
+
+ //searched things will be shown in form of image
+  if (search && showSearch) {
+    productsCopy = productsCopy.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+  }
+
   setFilterProducts(productsCopy);
+
+ 
+
 }
 useEffect(() =>{
   applyFilter();
-},[category,subCategory])
+},[category,subCategory,search,showSearch])
+//Now sorting the product according to Relavant,Low-High,High-Low
+const sortProduct = () => {
+  let fpCopy = filterProducts.slice();
+  switch (sortType) {
+    case 'low-high':
+      setFilterProducts(fpCopy.sort((a,b) => (a.price - b.price)));
+      break;
 
+    case 'high-low':
+      setFilterProducts(fpCopy.sort((a,b) => (b.price - a.price)));
+      break;
 
+    default:
+      applyFilter();
+      break;
+  }
+}
+useEffect(() => {
+  sortProduct();
+},[sortType])
   return (
     <>
       {isMobile && (
@@ -101,7 +130,7 @@ useEffect(() =>{
       <Title text1={'ALL'} text2={'COLLECTIONS____'} />
     </div>
     {/*Productsort*/}
-    <select >
+    <select onChange={(e) => setSortType(e.target.value)} >
       <option value="relavant">SortBy:Relavant</option>
       <option value="low-high">SortBy:Low-High</option>
       <option value="high-low">SortBy:High-Low</option>

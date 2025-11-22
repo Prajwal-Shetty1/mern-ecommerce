@@ -446,3 +446,139 @@ section, .our-policy, .letter-box, .footer {
   object-fit: cover;
   border-radius: 5px; 
 }
+@media (max-width: 767px) {
+
+  /* Main layout becomes vertical */
+  .main-layout {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* FILTER HEADING - visible on mobile */
+  .filter-heading {
+    display: block;
+    padding: 15px;
+    background: #f7f7f7;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .filter-heading img {
+    width: 16px;
+    margin-left: 6px;
+  }
+
+  /* FILTER BOX */
+  .filter-section {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+  }
+
+  .filter-categories p,
+  .filter-subcategories p {
+    margin: 8px 0;
+    font-size: 15px;
+  }
+
+  /* RIGHT SIDE SORT + TITLE */
+  .right-side {
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  .right-side select {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+
+  /* PRODUCT GRID */
+  .mapping-products {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+}
+
+/*SearchBar.jsx*/
+.search-bar {
+  padding: 12px 16px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.showsearch-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  padding: 8px 12px;
+  border-radius: 30px;
+  gap: 8px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.showsearch-bar input {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  
+}
+.showsearch-bar img {
+  width: 20px;
+  height: 20px;
+}
+.search-bar img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+/* MOBILE SEARCH BAR */
+@media (max-width: 767px) {
+
+  .search-bar {
+    padding: 10px !important;
+    margin-bottom: 12px !important;
+    gap: 6px !important;
+  }
+
+  .showsearch-bar {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 8px 12px !important;
+    border-radius: 20px !important;
+  }
+
+  .showsearch-bar input {
+    font-size: 14px !important;
+    width: 100% !important;
+  }
+
+  .showsearch-bar img {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .search-bar img {
+    width: 22px !important;
+    height: 22px !important;
+    margin-right: 0 !important;
+  }
+}
